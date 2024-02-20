@@ -39,7 +39,7 @@ export type SaltosDeEscalas = {
 
 export const SALTOS_ESCALAS: SaltosDeEscalas = {
     mayor: ['t', 't', 'st', 't', 't', 't', 'st'],
-    menor: ['t', 't', 'st', 't', 't', 't', 'st']
+    menor: ['t', 'st', 't', 't', 'st', 't', 't']
 }
 
 export const OCTAVAS_GUITARRA = [
