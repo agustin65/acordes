@@ -2,8 +2,8 @@ import { ESCALAS, NOTAS, type Escalas, type Nota } from "@/components/lib";
 import type { Dispatch, SetStateAction } from "react";
 import Selector from "./Selector";
 import { EscalaContext } from "@/components/globalState";
-import Boton from "../../oldAcorde/Display/ToggleOffset/Boton";
 import { FaTimes } from "react-icons/fa";
+import Boton from "@/components/Main/Controles/Botones/boton";
 
 export default function Header({
     tipo,
@@ -43,7 +43,7 @@ export default function Header({
             </section>
         </div>
 
-        <Boton action={close} colores="">
+        <Boton action={close} classes="">
             <FaTimes />
         </Boton>
     </header>

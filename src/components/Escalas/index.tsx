@@ -2,7 +2,7 @@
 import Header from "./Header";
 import Display from "./Display";
 import { useGlobalState } from "../globalState";
-import localizarNotas from "../oldAcorde/localizarNotas";
+import localizarNotas from "../ShowAcorde/functions/localizarNotas";
 
 export default function Escalas() {
     const { escala, setEscala, acordeActual } = useGlobalState()
