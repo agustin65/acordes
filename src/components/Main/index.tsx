@@ -31,6 +31,7 @@ export default function Main() {
             acorde={acordeActual}
             toggleNota={toggleNota}
             toggleCuerdasMudas={toggleCuerdaMuda}
+            compararNotas
         />
 
         <Botones />

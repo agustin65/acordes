@@ -1,20 +1,17 @@
+import Select from "./Select"
 import { ESCALAS, NOTAS, type Escalas, type Nota } from "@/components/lib";
 import type { Dispatch, SetStateAction } from "react";
-import Selector from "./Selector";
 import { EscalaContext } from "@/components/globalState";
-import { FaTimes } from "react-icons/fa";
-import Boton from "@/components/Main/Controles/Botones/boton";
+
 
 export default function Header({
     tipo,
     tono,
-    setEscala,
-    close
+    setEscala
 }: {
     tipo: Escalas,
     tono: Nota,
     setEscala: Dispatch<SetStateAction<EscalaContext>>
-    close: () => void
 }) {
 
     const change = (val: Nota | Escalas, key: 'tono' | 'tipo') => {
@@ -24,27 +21,21 @@ export default function Header({
         }))
     }
 
-    return <header className="flex items-center justify-between w-full gap-4 text-2xl md:text-3xl relative">
-        <div className="flex flex-col items-start md:flex-row md:items-center gap-2 md:gap-4">
-            Escala
-            <section className="flex gap-2">
-                <Selector
-                    selected={tono}
-                    change={val => change(val as Nota, 'tono')}
-                    items={NOTAS}
-                    classes="w-20"
-                />
-                <Selector
-                    selected={tipo}
-                    change={val => change(val as Escalas, 'tipo')}
-                    items={ESCALAS}
-                    classes="w-40"
-                />
-            </section>
-        </div>
-
-        <Boton action={close} classes="">
-            <FaTimes />
-        </Boton>
+    return <header className="text-2xl md:text-4xl w-fit flex flex-row sm:justify-center sm:px-[15vw] gap-2 sm:gap-4 items-center">
+        <h1>Escala:</h1>
+        <section className="flex gap-2 w-full min-w-60 md:min-w-80 max-w-80">
+            <Select
+                selected={tono}
+                change={val => change(val as Nota, 'tono')}
+                items={NOTAS}
+                classes="w-1/3"
+            />
+            <Select
+                selected={tipo}
+                change={val => change(val as Escalas, 'tipo')}
+                items={ESCALAS}
+                classes="w-2/3"
+            />
+        </section>
     </header>
 }

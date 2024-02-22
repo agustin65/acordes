@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={font.className} style={{ width: 'calc(100vw - 40px)', marginLeft: '20px' }} >{children}</body>
+      <body className={font.className + ' sm:w-[calc(100vw-40px) sm:ml-[20px]]'} >{children}</body>
     </html>
   );
 }

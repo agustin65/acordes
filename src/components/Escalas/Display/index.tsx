@@ -1,26 +1,24 @@
 import { Escalas, Nota as NotaType } from "@/components/lib";
-import armarEscala from "./armarEscala";
-import Nota from "./Nota";
+import armarEscala from "@/functions/armarEscala";
+import Nota from './Nota'
 
 export default function Display({
-    tono,
     tipo,
+    tono,
     notasDeAcorde
 }: {
-    tono: NotaType
     tipo: Escalas
+    tono: NotaType
     notasDeAcorde: NotaType[]
 }) {
-
     const escala = armarEscala(tono, tipo)
 
-    return <section className="flex flex-col gap-4 items-center w-fit">
-        <article className="w-full flex flex-wrap justify-center gap-2">
-            {escala.map((n, key) => <Nota
-                key={key}
-                nota={n}
-                usada={notasDeAcorde.includes(n)}
-            />)}
-        </article>
-    </section>
+    return <article className="w-full text-2xl md:text-4xl flex flex-wrap gap-2 md:gap-4 justify-center">
+        {escala.map((nota, key) => <Nota
+            key={key}
+            nota={nota}
+            marcar={notasDeAcorde.includes(nota)}
+        />)}
+
+    </article>
 }

@@ -11,6 +11,6 @@ export default function Scales() {
         action={toggleShowScales}
         classes={'text-[#222] ' + (escala.isOpen ? ' bg-[#ccc]' : "")}
     >
-        E
+        E°
     </Boton>
 }

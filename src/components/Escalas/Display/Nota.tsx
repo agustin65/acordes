@@ -1,15 +1,13 @@
-
+import { Nota } from "@/components/lib";
 
 export default function Nota({
     nota,
-    usada
+    marcar
 }: {
-    nota: string
-    usada: boolean
+    nota: Nota,
+    marcar: boolean
 }) {
-    return <h2
-        className={"w-20 text-center py-2 px-2 text-2xl md:text-3xl rounded-lg border-2 border-black/15 marca-nota transition-all "+(usada ? 'bg-[#6e83de]':'bg-[#ededed]')}
-    >
+    return <div className={"rounded-md md:rounded-lg basis-1/8 w-1/8 px-2 py-1 md:py-2 md:px-4 min-w-max transition-all shadow-1 " + (marcar ? 'bg-[#4b2ce8] text-white' : 'bg-[#eee]')}>
         {nota}
-    </h2>
+    </div>
 }

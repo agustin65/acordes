@@ -1,4 +1,4 @@
-import { Nota, NOTAS, CUERDAS_GUITARRA } from "../../lib";
+import { Nota, NOTAS, CUERDAS_GUITARRA } from "@/components/lib";
 
 export default function localizarNotas(cuerdas: number[][], mudas?: boolean[]): Nota[] {
     let notas: Nota[] = []

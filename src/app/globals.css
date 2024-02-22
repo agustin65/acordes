@@ -27,6 +27,9 @@ body {
   box-shadow: 0px 0px 10px rgba(20, 20, 20, 0.25);
 }
 
+.shadow-1{
+  box-shadow: 0px 0px 6px rgba(20, 20, 20, 0.35);
+}
 
 @keyframes push-in {
   from {

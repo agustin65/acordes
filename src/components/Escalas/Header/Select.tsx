@@ -1,6 +1,6 @@
 
 
-export default function Selector({
+export default function Select({
     selected,
     change,
     items,

@@ -7,7 +7,7 @@ export default function Header({
     setFiltro: (val: string) => void
 }) {
     return <header className="text-3xl md:text-4xl w-full px-[5vw] lg:px-0 flex gap-8 flex-col md:flex-row justify-center md:justify-between items-center">
-        <h1 className="text-[#555] font-medium text-5xl md:text-6xl" >Mi Biblioteca:</h1>
+        <h1 className="text-[#555] font-medium text-4xl md:text-6xl" >Mi Biblioteca:</h1>
 
         <input
             type='text'

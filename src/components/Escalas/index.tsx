@@ -1,34 +1,28 @@
 "use client";
 import Header from "./Header";
+import { useGlobalState } from "../globalState"
 import Display from "./Display";
-import { useGlobalState } from "../globalState";
-import localizarNotas from "../ShowAcorde/functions/localizarNotas";
+import localizarNotas from "@/functions/localizarNotas";
 
 export default function Escalas() {
     const { escala, setEscala, acordeActual } = useGlobalState()
 
-    const { tono, tipo } = escala
+    const { isOpen, tono, tipo } = escala
 
-    const toggleIsOpen = (isOpen: boolean) => setEscala(s => ({
-        ...s,
-        isOpen
-    }))
-
-    if (escala.isOpen) return <section className="w-fit max-w-4xl flex flex-col gap-8 items-center ">
+    return <section
+        className={'transition-all gap-4 md:gap-8 items-center w-full flex flex-col ' + (isOpen ? '' : 'pointer-events-none opacity-0')}
+        style={{ maxHeight: isOpen ? '50rem' : 0 }}
+    >
         <Header
-            tipo={tipo}
             tono={tono}
+            tipo={tipo}
             setEscala={setEscala}
-            close={() => toggleIsOpen(false)}
         />
         <Display
-            tipo={tipo}
             tono={tono}
+            tipo={tipo}
             notasDeAcorde={localizarNotas(acordeActual.cuerdas, acordeActual.mudas)}
         />
     </section>
 
-    return <button onClick={() => toggleIsOpen(true)} className="px-6 py-3 my-16 text-3xl shadow-lg bg-[#909090] hover:bg-[#aaa] active:bg-[#888] shadow-black/20 rounded-xl text-[#eee] transition-all hover:scale-105 active:scale-100 " >
-        Usar Escalas
-    </button>
 }
