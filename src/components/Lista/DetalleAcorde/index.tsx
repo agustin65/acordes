@@ -23,7 +23,7 @@ export default function DetalleAcorde({
         close={closeHandler}
     >
         <Acorde
-            {...acorde}
+            acorde={acorde}
         />
         <Botones
             id={acorde.nombre}

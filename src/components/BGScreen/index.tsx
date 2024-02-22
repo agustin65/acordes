@@ -35,7 +35,7 @@ export default function Screen({
     >
         <section
             onClick={preventDefaults}
-            className={'rounded-lg cursor-default bg-[#c8c8c8] border-4  border-white/10 text-center flex flex-col items-center gap-5 text-[#222] px-4 py-2.5 sm:px-8 sm:py-5 text-xl sm:text-2xl md:text-3xl ' + (showExit ? 'push-out pointer-events-none' : 'push-in')}
+            className={'rounded-lg cursor-default bg-[#c8c8c8] border-4  border-white/10 text-center flex flex-col items-center text-[#222] px-4 py-2.5 sm:px-8 sm:py-5 text-xl sm:text-2xl md:text-3xl ' + (showExit ? 'push-out pointer-events-none' : 'push-in')}
         >
             {children}
         </section>

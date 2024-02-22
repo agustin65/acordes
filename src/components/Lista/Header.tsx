@@ -6,8 +6,8 @@ export default function Header({
     filtro: string,
     setFiltro: (val: string) => void
 }) {
-    return <header className="text-3xl md:text-4xl w-full flex gap-8 flex-col xl:flex-row justify-center xl:justify-between items-center">
-        <h1 className="text-[#333]" style={{ fontSize: '120%' }}>Acordes guardados</h1>
+    return <header className="text-3xl md:text-4xl w-full px-[5vw] lg:px-0 flex gap-8 flex-col md:flex-row justify-center md:justify-between items-center">
+        <h1 className="text-[#555] font-medium text-5xl md:text-6xl" >Mi Biblioteca:</h1>
 
         <input
             type='text'

@@ -24,17 +24,19 @@ export default function ListaDeAcordes() {
             data={acordesGuardados.find(a => a.nombre === seleccionado)!}
             close={(() => setSeleccionado(''))}
         />}
-        <section className="flex flex-col w-full max-w-7xl items-center gap-4 fade-in">
+        <section className="flex flex-col w-full max-w-7xl items-center gap-8 md:gap-16 fade-in">
 
 
             <Header
                 filtro={filtro}
                 setFiltro={val => setFiltro(val.toLowerCase())}
             />
+
             <Acordes
                 acordes={listaDeAcordes.slice(0, mostrar)}
                 seleccionar={(id: string) => setSeleccionado(id)}
             />
+            
             {mostrar < listaDeAcordes.length && <button
                 className="px-6 py-3 text-3xl my-8 shadow-lg bg-[#909090] hover:bg-[#aaa] active:bg-[#888] shadow-black/20 rounded-xl text-[#eee] transition-all hover:scale-105 active:scale-100 "
                 onClick={() => setMostrar(v => v + tamanio_bloque)}

@@ -2,7 +2,7 @@ import { ESCALAS, NOTAS, type Escalas, type Nota } from "@/components/lib";
 import type { Dispatch, SetStateAction } from "react";
 import Selector from "./Selector";
 import { EscalaContext } from "@/components/globalState";
-import Boton from "../../Acorde/Display/ToggleOffset/Boton";
+import Boton from "../../oldAcorde/Display/ToggleOffset/Boton";
 import { FaTimes } from "react-icons/fa";
 
 export default function Header({
