@@ -3,18 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3333",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next start -p 3333",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.544.0",
+    "next": "^14.2.33",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "react-icons": "^5.0.1",
     "rm": "^0.1.8",
     "store": "^2.0.12",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "tone": "^14.7.77"
   },
   "devDependencies": {
@@ -24,7 +30,7 @@
     "@types/store": "^2.0.5",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "^16.0.8",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
